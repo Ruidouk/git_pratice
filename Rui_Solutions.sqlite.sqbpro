@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/ruicarvalho/Desktop/Coding/Codacademy/World Population Project/sql-population-queries-starting/db.sqlite" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><current_tab id="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="920"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="population_years"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="population_queries.sql">-- This is the first query:
+
+SELECT DISTINCT year from population_years;
+
+-- Add your additional queries below:
+
+SELECT * from population_years
+WHERE country = 'Gabon'
+ORDER by population DESC;
+
+
+SELECT * from population_years
+where year = 2005
+ORDER by population ASC
+limit 5;
+
+SELECT DISTINCT country from population_years
+where population &gt;100 and year =  2010
+order by population DESC;
+
+select distinct country from population_years
+where country like  '% Islands %';
+
+SELECT year, population FROM population_years
+WHERE country = 'Indonesia'
+AND year = 2000
+OR country = 'Indonesia'
+AND year = 2010;</sql><current_tab id="0"/></tab_sql></sqlb_project>
